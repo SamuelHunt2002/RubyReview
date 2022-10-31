@@ -1,11 +1,4 @@
 class PasswordManager2
-     def initialize
-        @password_manager = Array.new()
-        @password_array = Array.new()
-        @service_array = Array.new()
-
-     end
-
      def add(service, password)
         new_entry = {
             "service" => service,
