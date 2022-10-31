@@ -1,5 +1,10 @@
 class PasswordManager2
-    class PasswordManager2
+    def initialize
+        #Initializes three arrays, password manager being the main one, and two other arrays for checking / ease of ordering.
+        @password_manager = Array.new()
+        @password_array = Array.new()
+        @service_array = Array.new()
+    end
         def add(service, password)
            new_entry = {
                "service" => service,
@@ -46,6 +51,4 @@ class PasswordManager2
            return sorted_list.map{|k|k["service"]}
            end
        end
-   end
-
 end
