@@ -29,7 +29,7 @@ class PasswordManager2
 
   def remove(service)
     deleted_pass = @password_manager.find { |h| h["service"] == service }["password"]
-    @password_manager.map! { |e| e[service] != service }
+    @password_manager.select! { |e| e["service"] != service }
     @password_array.reject! { |e| e[deleted_pass] == deleted_pass }
     @service_array.reject! { |e| e[service] == service }
   end
